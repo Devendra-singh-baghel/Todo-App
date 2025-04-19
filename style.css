@@ -21,7 +21,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 65%;
     margin: auto;
     padding: 10px;
     font-weight: 500;
@@ -35,11 +35,32 @@ nav .logo {
 nav ul {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 40%;
 }
 
 ul li {
     list-style: none;
+}
+
+.theme-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #787878;
+    border-radius: 20px;
+    right: 0;
+    bottom: 10px;
+}
+
+.theme-mode {
+    display: flex;
+    gap: 10px;
+    font-size: 17px;
 }
 
 .outer {
@@ -62,28 +83,11 @@ ul li {
 }
 
 .heading {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 20px;
     font-size: 25px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
-}
-
-.theme-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25px;
-    padding: 10px;
-    font-weight: 400;
-    font-size: 14px;
-    cursor: pointer;
-    border: 1px solid #787878;
-    border-radius: 20px;
-    position: absolute;
-    right: 0;
-    bottom: 10px;
 }
 
 .input-box {
@@ -278,11 +282,6 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 700px) {
 
-    nav {
-        width: 94%;
-        margin: auto;
-    }
-
     .outer {
         max-width: 100vw;
         width: 94%;
@@ -295,6 +294,13 @@ input[type="checkbox"] {
 
     .task-list .Edit {
         right: 8%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        width: 94%;
+        margin: auto;
     }
 }
 
@@ -313,21 +319,25 @@ body.light-mode .filter-task {
     transition: all 0.5s ease;
 }
 
-body.light-mode .theme-box{
+body.light-mode .theme-box {
     background-color: #555 !important;
     color: #e8e4e4 !important;
+    transition: all 0.5s ease;
 }
 
-body.light-mode .outer{
+body.light-mode .outer {
     background-color: #01143aa1 !important;
+    transition: all 0.5s ease;
 }
 
-body.light-mode hr{
+body.light-mode hr {
     border: 1px solid #353535;
+    transition: all 0.5s ease;
 }
 
-body.light-mode textarea::placeholder{
+body.light-mode textarea::placeholder {
     color: #686868;
+    transition: all 0.5s ease;
 }
 
 
@@ -342,34 +352,38 @@ body.dark-mode .filter-task {
     transition: all 0.5s ease;
 }
 
-body.dark-mode .container{
+body.dark-mode .container {
     background-color: #555 !important;
+    transition: all 0.5s ease;
 }
 
-body.dark-mode .outer{
+body.dark-mode .outer {
     background-color: #728998 !important;
+    transition: all 0.5s ease;
 }
 
 body.dark-mode h1,
-body.dark-mode label{
+body.dark-mode label {
     color: #e8e4e4 !important;
+    transition: all 0.5s ease;
 }
 
-body.dark-mode textarea::placeholder{
+body.dark-mode textarea::placeholder {
     color: #838383;
+    transition: all 0.5s ease;
 }
 
-body.dark-mode .theme-box{
+body.dark-mode .theme-box {
     background-color: #f5f5ff7f !important;
     color: #000 !important;
+    transition: all 0.5s ease;
 }
 
 
 .sortable-chosen {
     transform: scale(1.1);
-  }
+}
 
-  .sortable-ghost {
+.sortable-ghost {
     opacity: 0.3;
-  }
-
+}

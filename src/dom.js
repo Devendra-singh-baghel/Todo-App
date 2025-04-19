@@ -75,5 +75,5 @@ export function handleFilter() {
         });
     }
 
-    if (!filterTask || !list || !pending || !completed) return;
+    if (!filterTask || !pending || !completed) return;
 }
