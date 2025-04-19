@@ -2,70 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Todo App - Manage Your Daily Tasks Efficiently</title>
+  <meta name="description" content="A simple and stylish todo app built using Vite + JavaScript. Manage your tasks easily with filtering and theme mode." />
+  <meta name="keywords" content="todo app, task manager, task tracker, daily planner, JavaScript todo app, Vite todo" />
+  <meta name="author" content="Devendra Singh Baghel" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Todo App - Your Personal Task Manager" />
+  <meta property="og:description" content="Organize your daily tasks easily with this clean and powerful todo app." />
+  <meta property="og:image" content="https://todo-app-tawny-one-21.vercel.app/Assets/og-image.png" />
+  <meta property="og:url" content="https://todo-app-tawny-one-21.vercel.app/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Todo App - Manage Tasks Smartly" />
+  <meta name="twitter:description" content="A clean, responsive task manager app built with modern tech." />
+  <meta name="twitter:image" content="https://todo-app-tawny-one-21.vercel.app/Assets/og-image.png" />
+
+  <link rel="icon" href="/Assets/favicon.ico" />
+
+
 </head>
 
 <body>
-    <header class="navbar">
-        <nav>
-            <div class="logo">Todo-App</div>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-            <div class="theme-mode">
-                <span>Theme</span>
-                <button class="theme-box" title="Switch Theme"></button>
-            </div>
-        </nav>
-    </header>
-    <section>
-        <div class="outer">
-            <div class="container">
-                <div class="heading">
-                    <h1>Todo App</h1>
-                </div>
+  <header class="navbar">
+    <nav>
+      <div class="logo">Todo-App</div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      <div class="theme-mode">
+        <span>Theme</span>
+        <button class="theme-box" title="Switch Theme"></button>
+      </div>
+    </nav>
+  </header>
 
-                <div class="input-box">
-                    <textarea type="text" name="task" id="task" placeholder="Enter task" autocomplete="off"></textarea>
-                    <button class="add-btn" title="Add Task"><img src="Assets/plus.svg" alt="Add" srcset=""></button>
-                </div>
-
-                <div class="filter-box">
-                    <label for="filter-task">Filter: </label>
-                    <select name="filter-task" id="filter-task" class="filter-task">
-                        <option value="all">All</option>
-                        <option value="complete">Completed</option>
-                        <option value="pending">Pending</option>
-                    </select>
-                </div>
-                <hr>
-                <div class="ul-box">
-                    <span class="indicater"></span>
-                    <ul class="task-list">
-
-                    </ul>
-                </div>
-
-                <div class="total-task">
-                    <span class="completed"></span>
-                    <span class="pending"></span>
-                    <button class="clear-btn">Clear All</button>
-                </div>
-            </div>
+  <section>
+    <div class="outer">
+      <div class="container">
+        <div class="heading">
+          <h1>Todo App</h1>
+          <p>Easily manage your tasks, filter them, and stay productive every day!</p>
         </div>
-    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script>
-        new Sortable(document.querySelector('.task-list'), {
-            animation: 150,
-        });
-    </script>
-    <script type="module" src="/src/main.js"></script>
+        <div class="input-box">
+          <textarea type="text" name="task" id="task" placeholder="Enter task" autocomplete="off"></textarea>
+          <button class="add-btn" title="Add Task">
+            <img src="Assets/plus.svg" alt="Add" srcset="">
+          </button>
+        </div>
+
+        <div class="filter-box">
+          <label for="filter-task">Filter: </label>
+          <select name="filter-task" id="filter-task" class="filter-task">
+            <option value="all">All</option>
+            <option value="complete">Completed</option>
+            <option value="pending">Pending</option>
+          </select>
+        </div>
+        <hr>
+        <div class="ul-box">
+          <span class="indicater"></span>
+          <ul class="task-list"></ul>
+        </div>
+
+        <div class="total-task">
+          <span class="completed"></span>
+          <span class="pending"></span>
+          <button class="clear-btn">Clear All</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script>
+    new Sortable(document.querySelector('.task-list'), {
+      animation: 150,
+    });
+  </script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
