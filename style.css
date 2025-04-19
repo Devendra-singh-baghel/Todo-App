@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #adc4e9, #2c2f88);
+}
+
+.navbar {
+    background-color: #272e3482;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    font-weight: 500;
+    color: #e4e6e7;
+}
+
+nav .logo {
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.outer {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    width: 700px;
+    margin: 3% auto;
+    padding: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.container {
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.theme-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #787878;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.input-box {
+    display: flex;
+    height: 54px;
+    gap: 6px;
+}
+
+.input-box textarea {
+    width: 83%;
+    flex-grow: 1;
+    padding: 16px 45px 18px 15px;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    resize: none;
+}
+
+
+.input-box textarea:focus {
+    background-color: #252525;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.input-box .add-btn {
+    border: none;
+    border-radius: 4px;
+    background-color: #6928b8;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.add-btn img {
+    width: 35px;
+    padding: 2px 5px;
+}
+
+.filter-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.filter-box select {
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.indicater {
+    display: block;
+    height: 20px;
+    text-align: center;
+    margin: 5px auto;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 2px 80px 2px 37px;
+    font-size: 16px;
+    margin: 5px 0;
+    border-radius: 4px;
+    text-transform: capitalize;
+    background-color: #353535;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+li span {
+    width: 100%;
+    padding: 10px 5px;
+    z-index: 10;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 1.5%;
+}
+
+.task-list .Delete,
+.Edit {
+    background-color: #6928b8;
+    padding: 5px;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+}
+
+.task-list .Delete {
+    right: 1%;
+}
+
+.task-list .Edit {
+    right: 6%;
+}
+
+.task-list li img {
+    display: none;
+}
+
+.task-list li:hover img {
+    display: inline-block;
+}
+
+.total-task {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+
+}
+
+.total-task span {
+    padding: 9px;
+    flex-grow: 1;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.total-task .clear-btn {
+    padding: 11px 25px;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6928b8;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.add-btn:hover,
+.clear-btn:hover {
+    background-color: #510ca5;
+    transform: scale(1.03);
+    transition: ease-in-out 0.5s;
+}
+
+.input-box input:hover,
+.task-list li:hover,
+.total-task span:hover {
+    transform: scale(1.02);
+    transition: ease-in-out 0.5s;
+}
+
+.task-list img:hover {
+    background-color: #510ca5;
+    ;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+
+    nav {
+        width: 94%;
+        margin: auto;
+    }
+
+    .outer {
+        max-width: 100vw;
+        width: 94%;
+        padding: 15px;
+    }
+
+    .total-task {
+        flex-direction: column;
+    }
+
+    .task-list .Edit {
+        right: 8%;
+    }
+}
+
+
+
+
+
+/* Handle light-mode transitions */
+body.light-mode .container,
+body.light-mode textarea,
+body.light-mode .task-list li,
+body.light-mode .total-task span,
+body.light-mode .filter-task {
+    background-color: #f5f5ffae !important;
+    color: #000 !important;
+    transition: all 0.5s ease;
+}
+
+body.light-mode .theme-box{
+    background-color: #555 !important;
+    color: #e8e4e4 !important;
+}
+
+body.light-mode .outer{
+    background-color: #01143aa1 !important;
+}
+
+body.light-mode hr{
+    border: 1px solid #353535;
+}
+
+body.light-mode textarea::placeholder{
+    color: #686868;
+}
+
+
+
+/* Handle dark-mode transitions */
+body.dark-mode textarea,
+body.dark-mode .task-list li,
+body.dark-mode .total-task span,
+body.dark-mode .filter-task {
+    background-color: #353535 !important;
+    color: #e8e4e4 !important;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .container{
+    background-color: #555 !important;
+}
+
+body.dark-mode .outer{
+    background-color: #728998 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode label{
+    color: #e8e4e4 !important;
+}
+
+body.dark-mode textarea::placeholder{
+    color: #838383;
+}
+
+body.dark-mode .theme-box{
+    background-color: #f5f5ff7f !important;
+    color: #000 !important;
+}
+
+
+.sortable-chosen {
+    transform: scale(1.1);
+  }
+
+  .sortable-ghost {
+    opacity: 0.3;
+  }
+
