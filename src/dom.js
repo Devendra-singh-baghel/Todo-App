@@ -77,3 +77,17 @@ export function handleFilter() {
 
     if (!filterTask || !pending || !completed) return;
 }
+
+
+const navLinks = document.querySelector('.nav-links');
+const menuBar = document.querySelector(".toggle-icon");
+
+menuBar.addEventListener("click", ()=>{
+    navLinks.classList.toggle('show');
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("nav-links") && !e.target.classList.contains("toggle-icon")) {
+        navLinks.classList.remove("show");
+    }
+})

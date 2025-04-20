@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Todo App - Manage Your Daily Tasks Efficiently</title>
-  <meta name="description" content="A simple and stylish todo app built using Vite + JavaScript. Manage your tasks easily with filtering and theme mode." />
+  <meta name="description"
+    content="A simple and stylish todo app built using Vite + JavaScript. Manage your tasks easily with filtering and theme mode." />
   <meta name="google-site-verification" content="ZSeBriSBNKLueHy27ljKGF9gBWcxczJNI1O4yg3sbrg" />
   <meta name="keywords" content="todo app, task manager, task tracker, daily planner, JavaScript todo app, Vite todo" />
   <meta name="author" content="Devendra Singh Baghel" />
@@ -32,11 +33,16 @@
   <header class="navbar">
     <nav>
       <div class="logo">Todo-App</div>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+      <div class="menu-toggle">
+        <div class="toggle-icon">
+          &#9776;
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
       <div class="theme-mode">
         <span>Theme</span>
         <button class="theme-box" title="Switch Theme"></button>
