@@ -323,8 +323,11 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 480px) {
 
+    .task-list li{
+        padding: 2px 80px 2px 25px;
+    }
     .task-list .Edit {
-        right: 10%;
+        right: 13%;
     }
 
     .navbar {
@@ -374,11 +377,6 @@ input[type="checkbox"] {
 
     .nav-links.show {
         display: flex;
-        background-color: #272e3482;
-    }
-
-    .nav-links.hide {
-        display: none;
         background-color: #272e3482;
     }
 
